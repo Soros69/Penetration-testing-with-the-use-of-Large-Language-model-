@@ -1,0 +1,28 @@
+SET UP THE LAB AND MAKE IT WORKING 
+
+*****Both of the machine should be on the host only for the security best practice reason *********
+
+
+FOR THE KALI 
+
+Git clone https://github.com/Wh0am123/MCP-Kali-Server.git
+Cd MCP-Kali-Server
+Python3 -m venv .venv
+Source .venv/bin/activate 
+Pip install -r requirement.txt
+
+To start a server 
+Python3 server.py -ip 0.0.0.0 –port 5000
+
+
+FOR THE WINDOWS 
+ 
+Ssh -L 5000:localhost:5000 kali@383.343.343.4.34
+
+Git cone https://github.com/Wh0am123/MCP-Kali-Server.git
+Cd MCP-Kali-Server
+Python -m venv .venv
+.\.venv\Scripts\activate
+Pip install -r requirements.txt 
+
+Python client.py –server http://0.0.0.0:5000
